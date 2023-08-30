@@ -92,8 +92,7 @@ def countFingers(image, hand_landmarks, handNo=0):
 				pinch=True
 				mouse.press(Button.left)
 
-
-# Defina uma função para 
+ 
 def drawHandLanmarks(image, hand_landmarks):
 
     # Desenhar as conexões entre os pontos de referência
@@ -117,16 +116,12 @@ while True:
 	hand_landmarks = results.multi_hand_landmarks
 
     # Desenhe os pontos de referência
-	drawHandLanmarks(image, hand_landmarks)
+	
 
     # Obtenha a posição dos dedos da mão        
-	countFingers(image, hand_landmarks)
-
-	cv2.imshow("Controlador de Midia", image)
+	
 
     # Saia da tela ao pressionar a barra de espaço
-	key = cv2.waitKey(1)
-	if key == 27:
-		break
+	
 
 cv2.destroyAllWindows()
